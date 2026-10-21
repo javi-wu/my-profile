@@ -39,3 +39,27 @@ button {
 button:hover {
     background-color: #0056b3;
 }
+.dark {
+  background: #1a1a2e;
+  color: #eee;
+}
+.dark a { color: #8be8fd; }
+/* 手机上：菜单默认隐藏，☰ 按钮显示 */
+#menuToggle { display: none; }
+
+@media (max-width: 600px) {          /* 手机宽度 */
+  #menuToggle {
+    display: block;                  /* 显示 ☰ */
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  #mainNav {
+    display: none;                   /* 菜单默认藏 */
+    flex-direction: column;          /* 展开时竖排 */
+  }
+  #mainNav.open {
+    display: flex;                   /* .open 类一加就显示 */
+  }
+}
